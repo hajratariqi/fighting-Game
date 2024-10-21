@@ -1,5 +1,6 @@
 let leoPosition = 10;
 let leoPower = false
+let leoFight = false
 let leoForward = false;
 let leoBackward = false;
 let leo = document.getElementById('leo');
@@ -18,6 +19,7 @@ window.addEventListener('keyup', ()=>{
     leoForward = false;
     leoForward = false;
     leoBackward = false;
+    leoFight = false
 })
 
 const moveLeo = (type) => {
@@ -38,7 +40,10 @@ const moveLeo = (type) => {
         leo.style.left = leoPosition + 'px'
     }
     else if(type == 'enter'){
+        if(leoFight == false){
             leo.src = './leo-fight.gif'
+            leoFight = true
+        }
     }
     else if(type == ' '){
             leo.src = './leo-power.gif'
