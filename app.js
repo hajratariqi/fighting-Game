@@ -37,9 +37,6 @@ const moveLeo = (type) => {
         leo.style.left = leoPosition + 'px'
     }
     else if(type == ' '){
-        // if(leoBackward == false){
             leo.src = './leo-power.gif'
-            // leoPower = true
-        // }
     }
 }
