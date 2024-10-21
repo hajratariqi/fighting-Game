@@ -7,6 +7,7 @@ let leo = document.getElementById('leo');
 window.addEventListener('keydown' , () =>{
     (event.key == 'ArrowRight') ? moveLeo('forward') :
     (event.key == 'ArrowLeft') ?  moveLeo('Backward') :
+    (event.key == 'Enter') ?  moveLeo('enter') :
     (event.key == ' ') ?  moveLeo(' ') :
     (event.key == ' ') ? moveLeo(' ') :
     null
@@ -35,6 +36,9 @@ const moveLeo = (type) => {
         }
         leoPosition -= 5
         leo.style.left = leoPosition + 'px'
+    }
+    else if(type == 'enter'){
+            leo.src = './leo-fight.gif'
     }
     else if(type == ' '){
             leo.src = './leo-power.gif'
